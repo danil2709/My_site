@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="description" content="Свяжитесь со мной">
+	<meta name="keywords" content="контакты, форма обратной связи, отправка сообщения">
+	<title>Написать мне</title>
+    <link rel="stylesheet"href="style1.css">
+    <style>
+		body {
+			background-color: dodgerblue;
+		}
+    button {
+ --glow-color: rgb(217, 176, 255);
+ --glow-spread-color: rgba(191, 123, 255, 0.781);
+ --enhanced-glow-color: rgb(231, 206, 255);
+ --btn-color: rgb(100, 61, 136);
+ border: .25em solid var(--glow-color);
+ padding: 1em 3em;
+ color: var(--glow-color);
+ font-size: 15px;
+ font-weight: bold;
+ background-color: var(--btn-color);
+ border-radius: 1em;
+ outline: none;
+ box-shadow: 0 0 1em .25em var(--glow-color),
+        0 0 4em 1em var(--glow-spread-color),
+        inset 0 0 .75em .25em var(--glow-color);
+ text-shadow: 0 0 .5em var(--glow-color);
+ position: relative;
+ transition: all 0.3s;
+}
+
+button::after {
+ pointer-events: none;
+ content: "";
+ position: absolute;
+ top: 120%;
+ left: 0;
+ height: 100%;
+ width: 100%;
+ background-color: var(--glow-spread-color);
+ filter: blur(2em);
+ opacity: .7;
+ transform: perspective(1.5em) rotateX(35deg) scale(1, .6);
+}
+
+button:hover {
+ color: var(--btn-color);
+ background-color: var(--glow-color);
+ box-shadow: 0 0 1em .25em var(--glow-color),
+        0 0 4em 2em var(--glow-spread-color),
+        inset 0 0 .75em .25em var(--glow-color);
+}
+
+button:active {
+ box-shadow: 0 0 0.6em .25em var(--glow-color),
+        0 0 2.5em 2em var(--glow-spread-color),
+        inset 0 0 .5em .25em var(--glow-color);
+}
+	</style>
+</head>
+<body>
+	<h1>Написать мне</h1>
+	<form>
+		<label for="sender-name">Имя отправителя:</label><br>
+		<input type="text" id="sender-name" name="sender-name" required><br><br>
+        <label for="sender-email">Почтовый ящик отправителя:</label><br>
+        <input type="email" id="sender-email" name="sender-email" required><br><br>
+        
+        <label for="phone-number">Номер телефона:</label><br>
+        <input type="tel" id="phone-number" name="phone-number" pattern="[0-9]{10}" required><br><br>
+        
+        <label>Как обращаться к Вам в дальнейшем:</label><br>
+        <input type="radio" id="male" name="gender" value="male" checked>
+        <label for="male">Уважаемый</label><br>
+        <input type="radio" id="female" name="gender" value="female">
+        <label for="female">Уважаемая</label><br><br>
+        
+        <label for="email-topic">Тема сообщения:</label><br>
+        <select id="email-topic" name="email-topic">
+            <option value="Жалоба">Жалоба</option>
+            <option value="Предложение">Предложение</option>
+            <option value="Дружба">Дружба</option>
+            <option value="Совместный проект">Совместный проект</option>
+            <option value="Другое">Другое</option>
+        </select><br><br>
+        
+        <label for="email-message">Сообщение:</label><br>
+        <textarea id="email-message" name="email-message" required></textarea><br><br>
+        
+        <label for="email-attachment">Прикрепить файл:</label><br>
+        <input type="file" id="email-attachment" name="email-attachment"><br><br>
+        
+        <input type="checkbox" id="personal-data-agreement" name="personal-data-agreement" required>
+        <label for="personal-data-agreement">Я согласен на обработку персональных данных</label><br><br>
+        
+        <input type="submit" value="Отправить письмо">
+    </form>
+
+</body>
+<header>
+    <nav>
+        <ul>
+          <button>
+            <li><a href="index.html">Главная</a></li>
+            
+  </button>
+  <button>
+  <li><a href="interests.html">Хобби</a></li>
+  </button>
+  <button>
+  <li><a href="contacts.html">Контакты</a></li>
+  </button>
+        </ul>
+      </nav>
+</body>
+</header>
+</html>    

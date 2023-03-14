@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="description" content="Моя визитная карточка">
+	<meta name="keywords" content="business card, name, field of study, profile, date of birth, photograph, school, city of birth, phone number, email, social media">
+	<title>Моя визитная карточка</title>
+	<link rel="stylesheet"href="main.css">
+	<style>
+		body {
+			background-color: dodgerblue;
+		}
+		button {
+ --glow-color: rgb(217, 176, 255);
+ --glow-spread-color: rgba(191, 123, 255, 0.781);
+ --enhanced-glow-color: rgb(231, 206, 255);
+ --btn-color: rgb(100, 61, 136);
+ border: .25em solid var(--glow-color);
+ padding: 1em 3em;
+ color: var(--glow-color);
+ font-size: 15px;
+ font-weight: bold;
+ background-color: var(--btn-color);
+ border-radius: 1em;
+ outline: none;
+ box-shadow: 0 0 1em .25em var(--glow-color),
+        0 0 4em 1em var(--glow-spread-color),
+        inset 0 0 .75em .25em var(--glow-color);
+ text-shadow: 0 0 .5em var(--glow-color);
+ position: relative;
+ transition: all 0.3s;
+}
+
+button::after {
+ pointer-events: none;
+ content: "";
+ position: absolute;
+ top: 120%;
+ left: 0;
+ height: 100%;
+ width: 100%;
+ background-color: var(--glow-spread-color);
+ filter: blur(2em);
+ opacity: .7;
+ transform: perspective(1.5em) rotateX(35deg) scale(1, .6);
+}
+
+button:hover {
+ color: var(--btn-color);
+ background-color: var(--glow-color);
+ box-shadow: 0 0 1em .25em var(--glow-color),
+        0 0 4em 2em var(--glow-spread-color),
+        inset 0 0 .75em .25em var(--glow-color);
+}
+
+button:active {
+ box-shadow: 0 0 0.6em .25em var(--glow-color),
+        0 0 2.5em 2em var(--glow-spread-color),
+        inset 0 0 .5em .25em var(--glow-color);
+}
+	</style>
+</head>
+<body>
+	<header>
+		<h1>Плотников Данил Дмитриевич</h1>
+		<h2>Кафедра</h2>
+		    <p><strong></strong> Кафедра бизнес-информатики и информационных технологий</p>
+		<h3>Направление подготовки</h3>
+		    <p><strong></strong> Искуственый интелект в цифровой экономике</p>
+		<h4>Профиль</h4>
+	</header>
+	<main>
+		<img src="https://sun9-east.userapi.com/sun9-44/s/v1/ig2/mGiC37v8XPGeIYN6CvG9N-lBqThdOhy1hIjT-QVrdCd1RkO7gVhAngeVsMrEiPdCXbYBZnIRhSv_bVBVlg6TfhAO.jpg?size=1200x1600&quality=95&type=album" width="400" height="550">
+		<p><strong>Дата рождения:</strong> 27.09.2004</p>
+		<p><strong>Университет:</strong> Магнитогорский Государственный Технический Университет им. Носова</p>
+		<p><strong>Место проживания:</strong> Магнитогорск</p>
+		<p><strong>Номер телефона:</strong> 8 908-071-89-14</p>
+		<p><strong>Email:</strong> danilplotnikov103@gmail.com</p>
+		<nav>
+			<ul>
+				<button>
+					<li><a href="index.html">Главная</a></li>
+					
+		  </button>
+		  <button>
+		  <li><a href="interests.html">Хобби</a></li>
+		  </button>
+		  <button>
+		  <li><a href="contacts.html">Контакты</a></li>
+		  </button>
+			</ul>
+		</nav>
+	</main>
+	<footer>
+		<p>Ссылки на мои соц.сети:</p>
+		<ul>
+			<button><li><a href="https://vk.com/danil.plotnikov">Вконтакте</a></li></button>
+		</ul>
+	</footer>
+</body>
+</html>
